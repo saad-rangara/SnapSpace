@@ -32,7 +32,7 @@ export default async function UserPage({ params }) {
 
     return (
       <div>
-        <h1>Welcome to {profileData.first_name}'s Page</h1>
+        <h1>Welcome to {profileData.first_name}&apos;s Page</h1>
         <div className="my-4 mx-2 flex flex-col gap-2">
           <Link
             className="hover:scale-110 ease-in-out transition-transform duration-300 font-bold bg-green-100 w-fit p-1.5 border-green-800 border-4 rounded-lg my-10"

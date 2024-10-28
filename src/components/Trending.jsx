@@ -1,4 +1,5 @@
 // src/app/trending/page.jsx
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Trending() {
@@ -29,7 +30,7 @@ export default function Trending() {
       <ul className="mt-4">
         {posts.map((post) => (
           <li key={post.id} className="border-b py-2">
-            <img
+            <Image
               src={post.image_url}
               alt="Post image"
               className="w-full h-auto"

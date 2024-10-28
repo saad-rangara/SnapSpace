@@ -1,4 +1,5 @@
 import { db } from "@/utils/dbConnection";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -40,7 +41,7 @@ export default async function Posts() {
               >
                 Photo Post #{post.id}
               </Link>
-              <img
+              <Image
                 src={post.image_url}
                 alt={`Photo post ${post.id}`}
                 className="w-full h-auto mb-4 rounded-lg"
