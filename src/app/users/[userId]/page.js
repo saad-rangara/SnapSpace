@@ -14,12 +14,12 @@ export default async function UserPage({ params }) {
   let FollowButton; //only added due to deployment issue in vercel
 
   const response = await db.query(
-    `SELECT * FROM user_profile WHERE clerk_id='${userId}'`
+    `SELECT * FROM users WHERE clerk_id='${userId}'`
   );
   const profileData = response.rows[0];
 
   const posts = await db.query(
-    `SELECT * FROM user_posts WHERE clerk_id='${userId}'`
+    `SELECT * FROM users WHERE clerk_id='${userId}'`
   );
   const postData = posts.rows;
 
