@@ -1,10 +1,10 @@
-import { db } from "@/utils/dbConnection"; // Database connection
-import Image from "next/image"; // Image component
-import Link from "next/link"; // Link component
+import { db } from "@/utils/dbConnection";
+import Image from "next/image";
+import Link from "next/link";
 
 export default async function AllUsersPage() {
-  const response = await db.query(`SELECT * FROM user_profile`); // Fetch all user profiles
-  const usersData = response.rows; // Get user data
+  const response = await db.query(`SELECT * FROM users`);
+  const usersData = response.rows;
 
   return (
     <div>
@@ -17,7 +17,7 @@ export default async function AllUsersPage() {
           >
             <Link
               className="font-bold hover:scale-110 ease-in-out transition-transform duration-300 z-10 inline-block p-1"
-              href={`/user/${user.clerk_id}`} // Link to user profile
+              href={`/user/${user.clerk_id}`}
             >
               User: {user.first_name} {user.last_name}
             </Link>
