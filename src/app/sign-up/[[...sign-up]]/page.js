@@ -24,7 +24,7 @@ export default function SignUpPage() {
       >
         Sign Up to the most wonderful website
       </h1>
-      <SignUp afterSignUp={handleSignUpSuccess} />
+      <SignUp />
     </div>
   );
 }
